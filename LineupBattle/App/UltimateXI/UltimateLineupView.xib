@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UltimateLineupView" customModule="GoalFury" customModuleProvider="target">
+            <connections>
+                <outlet property="firstMidfieldView" destination="uMB-no-GRt" id="2Vy-d5-Qy7"/>
+                <outlet property="fourthMidfieldView" destination="IEx-7u-6PW" id="Xk2-W9-Q68"/>
+                <outlet property="goalKeeperView" destination="2iK-QK-FXX" id="9Kk-DN-WHW"/>
+                <outlet property="leftAttackerView" destination="qig-NL-Ge8" id="4nL-d4-llc"/>
+                <outlet property="leftDefenderView" destination="i87-xO-ncS" id="Ied-Nc-nyJ"/>
+                <outlet property="middleAttackerView" destination="45D-QF-eYb" id="Fwe-qU-VKW"/>
+                <outlet property="middleDefenderView" destination="KZc-RA-2bK" id="CZb-fd-K7w"/>
+                <outlet property="rightAttackerView" destination="CeU-us-u8k" id="UAU-gs-whv"/>
+                <outlet property="rightDefenderView" destination="5TJ-bx-X9H" id="F92-Xa-ItW"/>
+                <outlet property="secondMidfieldView" destination="HYv-hG-FLa" id="acq-4i-hRf"/>
+                <outlet property="thirdMidfieldView" destination="eIj-L2-Or4" id="SgX-S0-jba"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="510"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="field_Ultimate" translatesAutoresizingMaskIntoConstraints="NO" id="PWb-J2-P0h">
+                    <rect key="frame" x="0.0" y="0.0" width="365" height="510"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iK-QK-FXX" userLabel="GoalKeeperView" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                    <rect key="frame" x="109.5" y="3" width="146" height="116"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="146" id="Lon-g7-DOI"/>
+                        <constraint firstAttribute="height" constant="116" id="hDw-5r-GRF"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-iG-QAS" userLabel="DefenseStackview">
+                    <rect key="frame" x="30" y="99" width="305" height="144"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-A7-n3Q">
+                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="144"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="i87-xO-ncS" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="0.0" width="50" height="116"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="116" id="13w-3E-2HI"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-M9-RFR" userLabel="filler">
+                                    <rect key="frame" x="26" y="116" width="50" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-S1-sxZ">
+                            <rect key="frame" x="101.5" y="0.0" width="102" height="144"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-EL-g9r" userLabel="filler">
+                                    <rect key="frame" x="26" y="0.0" width="50" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-RA-2bK" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="28" width="50" height="116"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="116" id="RhY-6g-Zvp"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Xgw-EL-g9r" firstAttribute="top" secondItem="ePZ-S1-sxZ" secondAttribute="top" id="4ue-Ls-D63"/>
+                                <constraint firstItem="KZc-RA-2bK" firstAttribute="top" secondItem="Xgw-EL-g9r" secondAttribute="bottom" id="Oem-v1-YMs"/>
+                                <constraint firstAttribute="bottom" secondItem="KZc-RA-2bK" secondAttribute="bottom" id="ecd-Og-ora"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y4A-US-L7G">
+                            <rect key="frame" x="203.5" y="0.0" width="101.5" height="144"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5TJ-bx-X9H" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="0.0" width="50" height="116"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="116" id="Ua8-Se-fp6"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lKa-Mj-ahY" userLabel="filler">
+                                    <rect key="frame" x="26" y="116" width="50" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Y4A-US-L7G" firstAttribute="width" secondItem="LyP-iG-QAS" secondAttribute="width" multiplier="1/3" id="7CK-N9-a2h"/>
+                        <constraint firstItem="ePZ-S1-sxZ" firstAttribute="width" secondItem="LyP-iG-QAS" secondAttribute="width" multiplier="1/3" id="Yss-aR-Czf"/>
+                        <constraint firstItem="CIa-A7-n3Q" firstAttribute="width" secondItem="LyP-iG-QAS" secondAttribute="width" multiplier="1/3" id="Z0S-pi-ukm"/>
+                        <constraint firstItem="CIa-A7-n3Q" firstAttribute="height" secondItem="LyP-iG-QAS" secondAttribute="height" id="rfv-7n-qAW"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-qh-UEh" userLabel="MidFieldStackview">
+                    <rect key="frame" x="0.0" y="233" width="365" height="127"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMB-no-GRt" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="5.5" width="91.5" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYv-hG-FLa" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="91.5" y="5.5" width="91" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-L2-Or4" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="182.5" y="5.5" width="91.5" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEx-7u-6PW" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="274" y="5.5" width="91" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HYv-hG-FLa" firstAttribute="width" secondItem="Izf-qh-UEh" secondAttribute="width" multiplier="1/4" id="3Xt-wi-VCZ"/>
+                        <constraint firstItem="IEx-7u-6PW" firstAttribute="width" secondItem="Izf-qh-UEh" secondAttribute="width" multiplier="1/4" id="GTV-Ws-ewe"/>
+                        <constraint firstItem="eIj-L2-Or4" firstAttribute="width" secondItem="Izf-qh-UEh" secondAttribute="width" multiplier="1/4" id="ZUb-Uy-BwS"/>
+                        <constraint firstItem="uMB-no-GRt" firstAttribute="width" secondItem="Izf-qh-UEh" secondAttribute="width" multiplier="1/4" id="lJ1-Pt-v9n"/>
+                        <constraint firstAttribute="height" constant="127" id="oN6-bH-5X1"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-FN-KeI" userLabel="AttackersStackview">
+                    <rect key="frame" x="30" y="360" width="305" height="150"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qig-NL-Ge8" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="17" width="101.5" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45D-QF-eYb" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="101.5" y="17" width="102" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeU-us-u8k" customClass="LineupPlayerView" customModule="GoalFury" customModuleProvider="target">
+                            <rect key="frame" x="203.5" y="17" width="101.5" height="116"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CeU-us-u8k" firstAttribute="width" secondItem="gl4-FN-KeI" secondAttribute="width" multiplier="1/3" id="Szs-p8-Bju"/>
+                        <constraint firstAttribute="height" constant="150" id="V62-EX-jeM"/>
+                        <constraint firstItem="45D-QF-eYb" firstAttribute="width" secondItem="gl4-FN-KeI" secondAttribute="width" multiplier="1/3" id="Yqh-gL-JOK"/>
+                        <constraint firstItem="qig-NL-Ge8" firstAttribute="width" secondItem="gl4-FN-KeI" secondAttribute="width" multiplier="1/3" id="qhM-Gi-Dha"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LyP-iG-QAS" firstAttribute="bottom" secondItem="Izf-qh-UEh" secondAttribute="top" constant="10" id="2rb-AJ-tL5"/>
+                <constraint firstItem="PWb-J2-P0h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3tt-tW-ZDw"/>
+                <constraint firstItem="2iK-QK-FXX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="E83-OR-foe"/>
+                <constraint firstItem="gl4-FN-KeI" firstAttribute="top" secondItem="Izf-qh-UEh" secondAttribute="bottom" id="G4D-qF-S7k"/>
+                <constraint firstItem="LyP-iG-QAS" firstAttribute="top" secondItem="2iK-QK-FXX" secondAttribute="bottom" constant="-20" id="JVq-mf-Oau"/>
+                <constraint firstItem="gl4-FN-KeI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="N4V-hM-OiR"/>
+                <constraint firstItem="2iK-QK-FXX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O1B-8Z-OOx"/>
+                <constraint firstItem="LyP-iG-QAS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Q7t-1v-LUa"/>
+                <constraint firstAttribute="trailing" secondItem="gl4-FN-KeI" secondAttribute="trailing" constant="30" id="QEJ-eo-ZQ9"/>
+                <constraint firstAttribute="bottom" secondItem="gl4-FN-KeI" secondAttribute="bottom" id="SPJ-o2-Cu6"/>
+                <constraint firstItem="PWb-J2-P0h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VsF-C6-esb"/>
+                <constraint firstAttribute="trailing" secondItem="Izf-qh-UEh" secondAttribute="trailing" id="e0M-GK-NWs"/>
+                <constraint firstAttribute="bottom" secondItem="PWb-J2-P0h" secondAttribute="bottom" id="fjz-FJ-B07"/>
+                <constraint firstAttribute="trailing" secondItem="PWb-J2-P0h" secondAttribute="trailing" id="hFF-e8-UYD"/>
+                <constraint firstAttribute="trailing" secondItem="LyP-iG-QAS" secondAttribute="trailing" constant="30" id="sva-lO-lyj"/>
+                <constraint firstItem="Izf-qh-UEh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zrO-Me-i9g"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <point key="canvasLocation" x="45" y="-28"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="field_Ultimate" width="365" height="510"/>
+    </resources>
+</document>

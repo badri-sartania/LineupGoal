@@ -1,0 +1,183 @@
+PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - CKTextField (0.2.0)
+  - Crashlytics (3.10.3):
+    - Fabric (~> 1.7.8)
+  - CustomBadge (3.0.0)
+  - Expecta (1.0.6)
+  - Fabric (1.7.8)
+  - FBSDKCoreKit (4.10.0):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.10.0):
+    - FBSDKCoreKit
+  - Firebase (2.5.1)
+  - ForceTouchGestureRecognizer (0.0.4)
+  - Helpshift (5.3.0-support)
+  - HexColors (3.1.1)
+  - JGProgressHUD (1.3.1)
+  - Mantle (2.0.6):
+    - Mantle/extobjc (= 2.0.6)
+  - Mantle/extobjc (2.0.6)
+  - Masonry (0.6.4)
+  - Mixpanel (2.9.4):
+    - Mixpanel/Mixpanel (= 2.9.4)
+  - Mixpanel/Mixpanel (2.9.4)
+  - MZTimerLabel (0.5.4)
+  - Nimble (7.1.2)
+  - OAStackView (1.0.1)
+  - Quick (1.3.0)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - ReactiveViewModel (0.2):
+    - ReactiveCocoa (~> 2.1)
+  - RKSwipeBetweenViewControllers (0.1.4)
+  - SCLAlertView-Objective-C (0.7.9)
+  - SlackTextViewController (1.9)
+  - SMPageControl (1.2)
+  - SnapKit (4.0.0)
+  - StatefulViewController (1.0)
+  - SwiftDate (4.5.1)
+  - TZStackView (1.3.0)
+  - UIScrollSlidingPages (1.3)
+  - UITextView+Placeholder (1.2.1)
+  - VVBlurPresentation (0.1.1)
+  - YLMoment (0.6.0)
+
+DEPENDENCIES:
+  - AFNetworking (= 2.6.0)
+  - BlocksKit
+  - CKTextField (= 0.2.0)
+  - Crashlytics
+  - CustomBadge
+  - Expecta (~> 1.0.5)
+  - Fabric
+  - FBSDKCoreKit (= 4.10.0)
+  - FBSDKLoginKit (= 4.10.0)
+  - Firebase (= 2.5.1)
+  - ForceTouchGestureRecognizer
+  - Helpshift (= 5.3.0-support)
+  - HexColors (~> 3.1.1)
+  - JGProgressHUD (= 1.3.1)
+  - Mantle (= 2.0.6)
+  - Masonry (= 0.6.4)
+  - Mixpanel (= 2.9.4)
+  - MZTimerLabel (= 0.5.4)
+  - Nimble
+  - OAStackView (= 1.0.1)
+  - Quick
+  - ReactiveCocoa (= 2.3.1)
+  - ReactiveViewModel (= 0.2)
+  - RKSwipeBetweenViewControllers
+  - SCLAlertView-Objective-C (= 0.7.9)
+  - SlackTextViewController (= 1.9)
+  - SMPageControl
+  - SnapKit (~> 4.0.0)
+  - StatefulViewController (from `https://github.com/tomdev-biz/StatefulViewController.git`)
+  - SwiftDate
+  - TZStackView (= 1.3.0)
+  - UIScrollSlidingPages (from `https://github.com/tomdev-biz/UIScrollSlidingPages.git`)
+  - UITextView+Placeholder (~> 1.2)
+  - VVBlurPresentation
+  - YLMoment (= 0.6.0)
+
+EXTERNAL SOURCES:
+  StatefulViewController:
+    :git: https://github.com/tomdev-biz/StatefulViewController.git
+  UIScrollSlidingPages:
+    :git: https://github.com/tomdev-biz/UIScrollSlidingPages.git
+
+CHECKOUT OPTIONS:
+  StatefulViewController:
+    :commit: c8e87e83bdb6a56be14fca3344724d4458001c7f
+    :git: https://github.com/tomdev-biz/StatefulViewController.git
+  UIScrollSlidingPages:
+    :commit: 247f73e156beddab3c2f60332a790dedec358a47
+    :git: https://github.com/tomdev-biz/UIScrollSlidingPages.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  CKTextField: 2507a2a208316f378729352f358425c7c9c5261f
+  Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
+  CustomBadge: c60738d213e7ef019b0bf1caa7948333f280ea9b
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
+  FBSDKCoreKit: 13bec8373fb3af94d44daf2aa1e0958687897fbd
+  FBSDKLoginKit: d3d4a2e9d31954deb00bfea964167a05ca1ea976
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  ForceTouchGestureRecognizer: 31c045b7dfc061a8c92ece76a9b4d7db905c2914
+  Helpshift: 61e5fdaa58b391745c8ef94bd59ac3fc06b60dd4
+  HexColors: d837cebe691e52c867d401ecd2374111add5445f
+  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  Mantle: 299966b00759634931699f69cb6a30b9239b944d
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  Mixpanel: 80d2ca9bb38ae91c1044d738e80fe448377ac89f
+  MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
+  Nimble: 3835ba9f459daa6b347f8a8e110aaae8ca1920a8
+  OAStackView: 95e7cb79cbea25c2342f496a44bdbe8bd4c8d510
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
+  ReactiveViewModel: 3b25ab68711944b1706b9dd6d1b37f37cbe6b094
+  RKSwipeBetweenViewControllers: 2236038119d6f7eb64ff589eb423fcda80cbe962
+  SCLAlertView-Objective-C: e36ab12dc1ec4ff6f932888083b21d71a3a1ad23
+  SlackTextViewController: d51503f7be846cb9976a273499dc90f2445e9447
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  StatefulViewController: 2a0e5ab30d9ade8e366253fb759baa9fbf458f3e
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  TZStackView: b0435ab4ca156ba1ef9e77468cb001e68a55e4c5
+  UIScrollSlidingPages: f226aab2ca23ae90ea193b786e117cec8b4cee5f
+  UITextView+Placeholder: 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
+  VVBlurPresentation: 62c0a9d6ac22f9bed99c0c5735e7eae8156bc618
+  YLMoment: a342e85269150756105901c4b701070154f82c16
+
+PODFILE CHECKSUM: f2776922e8e2faf9e8862de5091a98d8fe731e77
+
+COCOAPODS: 1.4.0

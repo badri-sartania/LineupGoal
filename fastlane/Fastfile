@@ -1,0 +1,132 @@
+fastlane_version "1.64.0"
+
+default_platform :ios
+
+def buildApp(type)
+  increment_build_number
+
+  ipa(
+    workspace: "LineupBattle.xcworkspace",
+    configuration: type,
+    scheme: "LineupBattleStaging",
+  )
+end
+
+def app_version
+  app_marketing_version = get_version_number(xcodeproj: "LineupBattle.xcodeproj")
+  return "v#{app_marketing_version}.#{Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]}"
+end
+
+def commitVersion
+  clean_build_artifacts
+
+  commit_version_bump(
+    message: "Bump to #{app_version} [ci skip]",
+    xcodeproj: "./LineupBattle.xcodeproj",
+    force: true
+  )
+
+  add_git_tag(
+    tag: app_version
+  )
+
+  git_pull
+  push_to_git_remote
+end
+
+platform :ios do
+  desc "Runs the tests of the iOS App"
+  lane :test do
+    xctest(
+      workspace: './LineupBattle.xcworkspace',
+      scheme: 'LineupBattle',
+      sdk: 'iphonesimulator',
+      destination: 'platform=iOS Simulator,name=iPhone 6,OS=latest'
+    )
+  end
+
+  desc "Submit a new Beta Build to Testflight"
+  desc "This will also make sure the profile is up to date"
+  lane :testflight do
+    buildApp("Release")
+
+    deliver(
+      skip_deploy: true,
+      beta: true
+    )
+
+    commitVersion
+  end
+
+  desc "Build and upload a new build to Apple TestFlight"
+  desc "This action will also do a build version bump and push it to git."
+  desc "This will **not** send an email to all testers, it will only be uploaded to the new TestFlight."
+  lane :beta do
+    buildApp("AdHoc")
+
+    crashlytics(
+      crashlytics_path: './Pods/Crashlytics/Crashlytics.framework', # path to your 'Crashlytics.framework'
+      api_token: "8213dbd336ab2bcc4caa1b320097cb3212d67c8b",
+      build_secret: "55c9010579570eaa331f667c8be01e20c985f22080c448041fed06eef66266bc",
+      groups: "developers"
+    )
+
+    slack(
+      message: "#{app_version} is now available on crashlytics",
+      channel: "#notifications"
+    )
+
+    commitVersion()
+  end
+
+  desc "Submit a new version to the App Store"
+  desc "This will do the following: "
+  desc "- Make sure the profiles are up to date and download the latest one"
+  desc "- Do a build version bump and push it"
+  desc "- Create new screenshots and store them in `./fastlane/screenshots`"
+  desc "- Collect the app metadata from `./fastlane/metadata`"
+  desc "- Upload screenshots + app metadata"
+  desc "- Build, sign and upload the app"
+  desc "This will **not** submit the app for review."
+  lane :appstore do
+    increment_build_number
+
+    build_app("Release")
+
+    deliver(
+      skip_deploy: true,
+      force: true
+    )
+
+    # commit_version_bump(
+    #   message: 'Version Bump by fastlane',
+    #   force: true
+    # )
+    #
+    # # build_number = Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]
+    # # add_git_tag(tag: "appstore-#{build_number}")
+    #
+    # push_to_git_remote
+  end
+
+  # after_all do |lane|
+  #   # This block is called, only if the executed lane was successful
+  #   slack(
+  #     message: "fastlane was successful :rocket:",
+  #     success: true,
+  #     default_payloads: [:lane, :test_result, :git_branch, :git_author]
+  #   )
+  #
+  #   clean_build_artifacts(
+  #     exclude_pattern: ".*\.mobileprovision" # don't clear provisioning profiles, as we store them in git
+  #   )
+  # end
+
+
+  # error do |lane, exception|
+  #   slack(
+  #     message: exception.message,
+  #     success: false
+  #   )
+  # end
+end
